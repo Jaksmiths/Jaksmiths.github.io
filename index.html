@@ -4,6 +4,7 @@
 <head>
     <title>Jake Smith's Website</title>
 </head>
+
 <style>
     body::after {
         content: "";
@@ -16,9 +17,36 @@
         position: absolute;
         z-index: -1;   
     }
+
+    .portrait {
+        width: 250px;
+        height: 250px;
+        border: 5px solid rgb(49, 49, 49);
+    }
+
+    .center {
+        width: 800;
+        margin-left: auto;
+        margin-right: auto;
+        border-spacing: 50px;
+    }
 </style>
+
 <body>
-    <div>Hello! it's me Jake. This is my website!</div>
+    <table class="center">
+        <tr>
+            <td>
+                <h1>Jake E. Smith</h1> 
+                <br>
+                <p>
+                    I'm currently a senior working on my Computer Science bachelors at <a href="https://umich.edu/" style="text-decoration: none;">University of Michigan</a>.
+                </p>
+            </td>
+            <td>
+                <img class="portrait" src="./static/images/selfpicture.jpg" alt="Error Loading">
+            </td>            
+        </tr>
+
 </body>
 
 </html>
