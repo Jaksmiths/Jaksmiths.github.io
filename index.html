@@ -2,51 +2,37 @@
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="css/indexstyle.css">
     <title>Jake Smith's Website</title>
 </head>
 
-<style>
-    body::after {
-        content: "";
-        background-image: url('./static/images/penguin.png');
-        opacity: 0.25;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        position: absolute;
-        z-index: -1;   
-    }
+<body class="dark-theme || light-theme">
 
-    .portrait {
-        width: 250px;
-        height: 250px;
-        border: 5px solid rgb(49, 49, 49);
-    }
+    <button class="darkmode" onclick="toggle()">
+        Toggle Dark/Light Mode
+    </button>
 
-    .center {
-        width: 800;
-        margin-left: auto;
-        margin-right: auto;
-        border-spacing: 50px;
-    }
-</style>
-
-<body>
     <table class="center">
         <tr>
             <td>
                 <h1>Jake E. Smith</h1> 
+                
                 <br>
+
                 <p>
-                    I'm currently a senior working on my Computer Science bachelors at <a href="https://umich.edu/" style="text-decoration: none;">University of Michigan</a>.
+                    I'm currently a senior working on my Computer Science bachelors 
+                    at <a href="https://umich.edu/">University of Michigan</a>.
                 </p>
             </td>
+
             <td>
                 <img class="portrait" src="./static/images/selfpicture.jpg" alt="Error Loading">
             </td>            
         </tr>
 
+        <script src="dark.js"></script>
 </body>
 
 </html>
