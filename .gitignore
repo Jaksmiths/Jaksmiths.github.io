@@ -1,3 +1,6 @@
 env/
 bin/
 app/
+node_modules/
+package-lock.json
+proj/map/Microplastic_Data.json

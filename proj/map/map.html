@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="https://unpkg.com/deck.gl@latest/dist.min.js"></script>
+    
+    <script src="https://unpkg.com/deck.gl@^8.5.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/carto@^8.5.0/dist.min.js"></script>
+
+    <!-- or -->
+    <script src="https://unpkg.com/@deck.gl/core@^8.5.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/layers@^8.5.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/geo-layers@^8.5.0/dist.min.js"></script>
+    <script src="https://unpkg.com/@deck.gl/carto@^8.5.0/dist.min.js"></script>
+
+    <title>Jake Smith's Website</title>
+
+    <style>
+        body {margin: 0; font-family: sans-serif;}
+        #tooltip {
+            position: absolute; 
+            background: rgb(70, 70, 70);
+            margin: 10px; padding: 10px;
+        }
+        #map {
+            width: 100vw;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div id="map" style="width: 100vw; height: 100vh;"></div>
+
+    <div id="tooltip"></div>
+
+</body>
+
+<script src="index.js"></script>
+
+</html>
