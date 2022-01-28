@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="../../css/mapstyle.css">
+
     <script src="https://unpkg.com/deck.gl@^8.6.0/dist.min.js"></script>
     <script src="https://unpkg.com/@deck.gl/carto@^8.6.0/dist.min.js"></script>
     
@@ -12,19 +13,6 @@
     <link href="https://libs.cartocdn.com/mapbox-gl/v1.13.0/mapbox-gl.css" rel="stylesheet" />
 
     <title>Jake Smith's Website</title>
-
-    <style>
-        body {margin: 0; font-family: sans-serif;}
-        #tooltip {
-            position: absolute; 
-            background: rgb(70, 70, 70);
-            margin: 10px; padding: 10px;
-        }
-        #map {
-            width: 100vw;
-            height: 100vh;
-        }
-    </style>
 
 </head>
 
@@ -34,8 +22,32 @@
 
     <div id="tooltip"></div>
 
+    <img id="info" src="../../static/images/infoicon.png" alt="Failed Loading">
+    <div id="info-text">
+        <h2 style="text-align: center;">
+            Plastic collected from SSV Corwith Cramer in
+            North Atlantic Subtropical Gyre from 1986-2008
+        </h2>
+        Microplastics are plastic debris pieces that are smaller 
+        than five millimeters in size. They can be found in most 
+        habitats on Earth as well as in the digestive tracts of many 
+        marine organisms and sea birds. As more research is done 
+        on this type of debris, the need for global standardization 
+        of sampling methods has been recognized. Since there is no 
+        single agreed-upon method for counting and weighing 
+        microplastics in water samples, it is difficult to compare 
+        results across studies. Although common approaches may be used, 
+        most laboratories develop their own procedures for microplastic 
+        sampling and processing based on factors such as budget, equipment 
+        availability, labor, and the specific research questions being 
+        asked. “Interlaboratory comparisons” are performed in many
+         scientific fields, during which multiple labs are asked to 
+         analyze identical samples in order to test their ability to produce 
+         reliable and repeatable measurements; this can be a step toward 
+         the development of standardized sampling methods.
+    </div>
 </body>
 
-<script src="index.js"></script>
+<script src="mapping.js"></script>
 
 </html>

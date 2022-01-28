@@ -3,4 +3,5 @@ bin/
 app/
 node_modules/
 package-lock.json
-proj/map/Microplastic_Data.json
+Microplastic_Data.json
+log.txt

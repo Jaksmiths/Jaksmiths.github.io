@@ -1,10 +1,40 @@
-body {
-    background-image: url(../static/images/penguin.png);
-    min-height: 100%;
-    min-width: 1024px;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    top: 0;
-    left: 0;
+body {margin: 0; font-family: sans-serif;}
+#tooltip {
+    position: absolute; 
+    background: rgb(70, 70, 70);
+    margin: 10px; padding: 10px;
+}
+#map {
+    width: 100vw;
+    height: 100vh;
+}
+
+/* Info Icon */
+#info {
+    position: absolute;
+    opacity: 0.8;
+    width: 50px;
+    height: 50px;
+    top: 90%;
+    left: 1%;
+}
+
+#info-text {
+    display: none;
+    color: #eee;
+    background-color: rgb(112, 112, 112);
+    position: absolute;
+    opacity: 0.8;
+    width: 80%;
+    height: 30%;
+    top: 50%;
+    left: 5%;
+    padding: 20px;
+}
+
+#info:hover {
+    opacity: 0.5;
+}
+#info:hover + #info-text{
+    display: block;
 }
