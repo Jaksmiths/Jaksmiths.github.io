@@ -31,7 +31,7 @@ const scatterplot = new deck.ScatterplotLayer({
 
 const map = new deck.DeckGL({
     container: 'map',
-    map_style: deck.carto.BASEMAP.POSITRON,
+    mapStyle: deck.carto.BASEMAP.VOYAGER,
     initialViewState: {
       longitude: -89.89,
       latitude: 25.68,
