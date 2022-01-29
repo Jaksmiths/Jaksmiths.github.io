@@ -83,12 +83,25 @@ function renderLayer(){
   });
 }
 
+let mapisDark = true;
+
+function mapStyleSwap(){
+  map.setProps({
+    mapStyle: mapisDark ? deck.carto.BASEMAP.VOYAGER : deck.carto.BASEMAP.DARK_MATTER,
+  });
+  mapisDark = !(mapisDark);
+  darkmode();
+}
+
 // Inital map layer load
 renderLayer();
 
-// document.getElementById("Scatterplot").onchange = function(){
-//   showscatter = showscatter ? false : true;
-// };
-// document.getElementById("Heatmap").onchange = function(){
-//   showheat = showheat ? false : true;
-// };
+// Darkmode
+function darkmode(){
+  var el = document.body;
+  el.classList.toggle("dark-mode");
+  const options = ["sourcedata", "info", "info-text", "mapStyleSwap", "Scatterplot", "Heatmap"];
+  options.forEach(key => {
+    document.getElementById(key).classList.toggle("dark-mode");
+  });
+}
