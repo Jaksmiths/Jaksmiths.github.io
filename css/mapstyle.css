@@ -27,9 +27,22 @@ body {margin: 0; font-family: sans-serif;}
     opacity: 0.8;
     width: 80%;
     height: 30%;
-    top: 50%;
+    top: 20%;
+    left: 10%;
+    padding: 25px;
+}
+
+#sourcedata {
+    display: block;
+    position: absolute;
+    background-color: rgb(192, 190, 190);
+    color: #121212;
+    top: 91%;
     left: 5%;
-    padding: 20px;
+    padding: 10px;
+}
+#sourcedata:hover {
+    color: #dfc47c;
 }
 
 #info:hover {
@@ -37,4 +50,27 @@ body {margin: 0; font-family: sans-serif;}
 }
 #info:hover + #info-text{
     display: block;
+}
+
+/* chechboxes */
+#controls {
+    position: fixed;
+    bottom: 60px;
+    left: 15px;
+    display: none;
+    animation-name: dropin;
+    animation-duration: 300ms;
+    animation-timing-function: ease-out;
+    z-index: 2;
+}
+
+#filter {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    margin-bottom: 30px;
+}
+
+#Scatterplot {
+    margin-bottom: 15px;
 }
