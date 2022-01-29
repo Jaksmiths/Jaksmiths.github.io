@@ -9,6 +9,12 @@ body {margin: 0; font-family: sans-serif;}
     width: 100vw;
     height: 100vh;
 }
+#wrapper {
+    position: absolute;
+    bottom: 30px;
+    min-height: 200px;
+    min-width: 300px;
+}
 
 /* Info Icon */
 #info {
@@ -16,8 +22,8 @@ body {margin: 0; font-family: sans-serif;}
     opacity: 0.8;
     width: 50px;
     height: 50px;
-    top: 90%;
-    left: 1%;
+    top: 85%;
+    left: 5%;
 }
 
 #info-text {
@@ -26,10 +32,10 @@ body {margin: 0; font-family: sans-serif;}
     background-color: rgb(112, 112, 112);
     position: absolute;
     opacity: 0.8;
-    width: 80%;
-    height: 30%;
-    top: 20%;
-    left: 10%;
+    width: 80vw;
+    height: 30vh;
+    top: -300px;
+    left: 125px;
     padding: 25px;
     padding-bottom: 50px;
 }
@@ -40,8 +46,8 @@ body {margin: 0; font-family: sans-serif;}
     background-color: rgb(192, 190, 190);
     font-size: 13px;
     color: #121212;
-    top: 91%;
-    left: 5.5%;
+    top: 88%;
+    left: 25%;
     padding: 10px;
     padding-bottom: 13px;
 }
@@ -59,8 +65,8 @@ body {margin: 0; font-family: sans-serif;}
 
 /* chechboxes */
 #controls {
-    position: fixed;
-    bottom: 60px;
+    position: absolute;
+    bottom: 20px;
     left: 15px;
     display: none;
     animation-name: dropin;
@@ -87,7 +93,7 @@ body {margin: 0; font-family: sans-serif;}
     background-color: rgb(192, 190, 190);
     border: none;
     color: #121212;
-    top: 91%;
+    top: 88%;
     left: 150px;
     padding: 10px;
     padding-bottom: 13px;

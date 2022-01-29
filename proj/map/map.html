@@ -16,56 +16,57 @@
 </head>
 
 <body>
-
     <div id="map" style="width: 100vw; height: 100vh;"></div>
     <div id="tooltip"></div>
 
-    <div id="controls" style="display: block;">
-        <div id="filter">
-            <label>
-                <input type="checkbox" name="Scatterplot" value="Scatterplot" id="Scatterplot" checked>
-                Scatterplot Layer
-            </label>
-            <label>
-                <input type="checkbox" name="Heatmap" value="Heatmap" id="Heatmap" checked>
-                Heatmap Layer
-            </label>
+    <div id="wrapper">
+        <div id="controls" style="display: block;">
+            <div id="filter">
+                <label>
+                    <input type="checkbox" name="Scatterplot" value="Scatterplot" id="Scatterplot" checked>
+                    Scatterplot Layer
+                </label>
+                <label>
+                    <input type="checkbox" name="Heatmap" value="Heatmap" id="Heatmap" checked>
+                    Heatmap Layer
+                </label>
+            </div>
         </div>
-    </div>
 
-    <img id="info" src="../../static/images/infoicon.png" alt="Failed Loading">
-    <div id="info-text">
-        <h2 style="text-align: center;">
-            Plastic collected from SSV Corwith Cramer in
-            North Atlantic Subtropical Gyre from 1986-2008
-        </h2>
-            <div style="font-weight: bold;">Description:</div> 
-            Microplastics are plastic debris pieces that are smaller 
-            than five millimeters in size. They can be found in most 
-            habitats on Earth as well as in the digestive tracts of many 
-            marine organisms and sea birds. As more research is done 
-            on this type of debris, the need for global standardization 
-            of sampling methods has been recognized. Since there is no 
-            single agreed-upon method for counting and weighing 
-            microplastics in water samples, it is difficult to compare 
-            results across studies. Although common approaches may be used, 
-            most laboratories develop their own procedures for microplastic 
-            sampling and processing based on factors such as budget, equipment 
-            availability, labor, and the specific research questions being 
-            asked. “Interlaboratory comparisons” are performed in many
-            scientific fields, during which multiple labs are asked to 
-            analyze identical samples in order to test their ability to produce 
-            reliable and repeatable measurements; this can be a step toward 
-            the development of standardized sampling methods.
-         <br>
-         <p style="font-weight: bold;">Made by Jake Smith using deck.gl and Javascript</p>
+        <img id="info" src="../../static/images/infoicon.png" alt="Failed Loading">
+        <div id="info-text">
+            <h2 style="text-align: center;">
+                Plastic collected from SSV Corwith Cramer in
+                North Atlantic Subtropical Gyre from 1986-2008
+            </h2>
+                <div style="font-weight: bold;">Description:</div> 
+                Microplastics are plastic debris pieces that are smaller 
+                than five millimeters in size. They can be found in most 
+                habitats on Earth as well as in the digestive tracts of many 
+                marine organisms and sea birds. As more research is done 
+                on this type of debris, the need for global standardization 
+                of sampling methods has been recognized. Since there is no 
+                single agreed-upon method for counting and weighing 
+                microplastics in water samples, it is difficult to compare 
+                results across studies. Although common approaches may be used, 
+                most laboratories develop their own procedures for microplastic 
+                sampling and processing based on factors such as budget, equipment 
+                availability, labor, and the specific research questions being 
+                asked. “Interlaboratory comparisons” are performed in many
+                scientific fields, during which multiple labs are asked to 
+                analyze identical samples in order to test their ability to produce 
+                reliable and repeatable measurements; this can be a step toward 
+                the development of standardized sampling methods.
+            <br>
+            <p style="font-weight: bold;">Made by Jake Smith using deck.gl and Javascript</p>
+        </div>
+
+        <a id="sourcedata" href="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.nodc:0211007/html">Source</a>
+        
+        <button id="mapStyleSwap" onclick="mapStyleSwap()">
+            Toggle Map Theme
+        </button>
     </div>
-    
-    <a id="sourcedata" href="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.nodc:0211007/html">Source</a>
-    
-    <button id="mapStyleSwap" onclick="mapStyleSwap()">
-        Toggle Map Theme
-    </button>
 
 </body>
 
