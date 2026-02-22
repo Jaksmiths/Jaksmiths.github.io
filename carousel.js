@@ -20,7 +20,6 @@ carousel.addEventListener('scroll', () => {
     } else if (carousel.scrollLeft <= 0) {
         carousel.scrollLeft += setWidth;
     }
-    console.log(carousel.scrollLeft);
 });
 
 // Arrow button scrolling
