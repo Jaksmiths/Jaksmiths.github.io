@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/mapstyle.css">
+    <link rel="stylesheet" href="../../css/output.css">
 
     <script src="https://unpkg.com/deck.gl@^8.6.0/dist.min.js"></script>
     <script src="https://unpkg.com/@deck.gl/carto@^8.6.0/dist.min.js"></script>
@@ -15,15 +15,15 @@
 
 </head>
 
-<body>
-    <div id="map" style="width: 100vw; height: 100vh;"></div>
-    <div id="tooltip"></div>
+<body class="m-0 font-sans">
+    <div id="map" class="w-screen h-screen"></div>
+    <div id="tooltip" class="absolute text-[#eee] bg-[rgb(70,70,70)] m-[10px] p-[10px]"></div>
 
-    <div id="wrapper">
-        <div id="controls" style="display: block;">
-            <div id="filter">
+    <div id="wrapper" class="absolute bottom-[30px] min-h-[200px] min-w-[300px]">
+        <div id="controls" class="absolute bottom-[20px] left-[15px] animate-[dropin_300ms_ease-out] z-[2]" style="display: block;">
+            <div id="filter" class="flex flex-col text-white mb-[30px]">
                 <label>
-                    <input type="checkbox" name="Scatterplot" value="Scatterplot" id="Scatterplot" checked>
+                    <input type="checkbox" name="Scatterplot" value="Scatterplot" id="Scatterplot" class="mb-[15px]" checked>
                     Scatterplot Layer
                 </label>
                 <label>
@@ -33,37 +33,37 @@
             </div>
         </div>
 
-        <img id="info" src="../../static/images/infoicon.png" alt="Failed Loading">
-        <div id="info-text">
-            <h2 style="text-align: center;">
+        <img id="info" class="peer absolute opacity-80 hover:opacity-50 w-[50px] h-[50px] top-[85%] left-[5%]" src="../../static/images/infoicon.png" alt="Failed Loading">
+        <div id="info-text" class="hidden peer-hover:block text-[#eee] bg-[rgb(112,112,112)] absolute opacity-80 w-[80vw] h-[30vh] top-[-300px] left-[125px] pt-[25px] px-[25px] pb-[50px]">
+            <h2 class="text-center">
                 Plastic collected from SSV Corwith Cramer in
                 North Atlantic Subtropical Gyre from 1986-2008
             </h2>
-                <div style="font-weight: bold;">Description:</div> 
-                Microplastics are plastic debris pieces that are smaller 
-                than five millimeters in size. They can be found in most 
-                habitats on Earth as well as in the digestive tracts of many 
-                marine organisms and sea birds. As more research is done 
-                on this type of debris, the need for global standardization 
-                of sampling methods has been recognized. Since there is no 
-                single agreed-upon method for counting and weighing 
-                microplastics in water samples, it is difficult to compare 
-                results across studies. Although common approaches may be used, 
-                most laboratories develop their own procedures for microplastic 
-                sampling and processing based on factors such as budget, equipment 
-                availability, labor, and the specific research questions being 
-                asked. “Interlaboratory comparisons” are performed in many
-                scientific fields, during which multiple labs are asked to 
-                analyze identical samples in order to test their ability to produce 
-                reliable and repeatable measurements; this can be a step toward 
+                <div class="font-bold">Description:</div>
+                Microplastics are plastic debris pieces that are smaller
+                than five millimeters in size. They can be found in most
+                habitats on Earth as well as in the digestive tracts of many
+                marine organisms and sea birds. As more research is done
+                on this type of debris, the need for global standardization
+                of sampling methods has been recognized. Since there is no
+                single agreed-upon method for counting and weighing
+                microplastics in water samples, it is difficult to compare
+                results across studies. Although common approaches may be used,
+                most laboratories develop their own procedures for microplastic
+                sampling and processing based on factors such as budget, equipment
+                availability, labor, and the specific research questions being
+                asked. "Interlaboratory comparisons" are performed in many
+                scientific fields, during which multiple labs are asked to
+                analyze identical samples in order to test the ability to produce
+                reliable and repeatable measurements; this can be a step toward
                 the development of standardized sampling methods.
             <br>
-            <p style="font-weight: bold;">Made by Jake Smith using deck.gl and Javascript</p>
+            <p class="font-bold">Made by Jake Smith using deck.gl and Javascript</p>
         </div>
 
-        <a id="sourcedata" href="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.nodc:0211007/html">Source</a>
-        
-        <button id="mapStyleSwap" onclick="mapStyleSwap()">
+        <a id="sourcedata" class="block absolute bg-[rgb(192,190,190)] text-[13px] text-[#121212] hover:text-[#81b3ff] top-[88%] left-[25%] pt-[10px] px-[10px] pb-[13px]" href="https://www.ncei.noaa.gov/metadata/geoportal/rest/metadata/item/gov.noaa.nodc:0211007/html">Source</a>
+
+        <button id="mapStyleSwap" class="inline-block absolute bg-[rgb(192,190,190)] border-none text-[#121212] hover:opacity-60 top-[88%] left-[150px] pt-[10px] px-[10px] pb-[13px]" onclick="mapStyleSwap()">
             Toggle Map Theme
         </button>
     </div>

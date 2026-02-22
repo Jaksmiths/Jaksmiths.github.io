@@ -1,6 +1,8 @@
 env/
 bin/
 app/
+css/input.css
 node_modules/
 package-lock.json
+package.json
 log.txt

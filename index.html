@@ -4,51 +4,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
-    <link rel="stylesheet" href="css/indexstyle.css">
+    <link rel="stylesheet" href="css/output.css">
+    <script src="dark.js"></script>
     <title>Jake Smith's Website</title>
 </head>
 
-<body class="dark-theme || light-theme">
+<body class="text-[#222] bg-white dark:text-[#eee] dark:bg-gray-900">
+    <!-- Triangles -->                                                                     
+    <div class="fixed inset-0 -z-10">                                                                 
+        <div class="absolute inset-0 bg-black/5 dark:bg-black/20 [clip-path:polygon(0_40%,100%_60%,100%_100%,0_100%)]"></div>                                      
+        <div class="absolute inset-0 bg-black/10 dark:bg-black/30 [clip-path:polygon(0_50%,100%_70%,100%_100%,0_100%)]"></div>                                      
+        <div class="absolute inset-0 bg-black/15 dark:bg-black/40 [clip-path:polygon(0_60%,100%_80%,100%_100%,0_100%)]"></div>                                      
+    </div>   
 
-    <button class="darkmode" onclick="toggle()">
-        Toggle Dark/Light Mode
-    </button>
+    <!-- Taskbar -->
+    <div class="flex flex-row gap-4 justify-end items-center p-4">
+        <div class="h-8 w-8">
+            <a href="https://github.com/Jaksmiths" class="text-gray-950 dark:text-gray-50 fill-current opacity-60 hover:opacity-100 transition-all">
+                <svg viewBox="0 0 98 98">
+                    <path d="M41.4395 69.3848C28.8066 67.8535 19.9062 58.7617 19.9062 46.9902C19.9062 42.2051 21.6289 37.0371 24.5 33.5918C23.2559 30.4336 23.4473 23.7344 24.8828 20.959C28.7109 20.4805 33.8789 22.4902 36.9414 25.2656C40.5781 24.1172 44.4062 23.543 49.0957 23.543C53.7852 23.543 57.6133 24.1172 61.0586 25.1699C64.0254 22.4902 69.2891 20.4805 73.1172 20.959C74.457 23.543 74.6484 30.2422 73.4043 33.4961C76.4668 37.1328 78.0937 42.0137 78.0937 46.9902C78.0937 58.7617 69.1934 67.6621 56.3691 69.2891C59.623 71.3945 61.8242 75.9883 61.8242 81.252L61.8242 91.2051C61.8242 94.0762 64.2168 95.7031 67.0879 94.5547C84.4102 87.9512 98 70.6289 98 49.1914C98 22.1074 75.9883 6.69539e-07 48.9043 4.309e-07C21.8203 1.92261e-07 -1.9479e-07 22.1074 -4.3343e-07 49.1914C-6.20631e-07 70.4375 13.4941 88.0469 31.6777 94.6504C34.2617 95.6074 36.75 93.8848 36.75 91.3008L36.75 83.6445C35.4102 84.2188 33.6875 84.6016 32.1562 84.6016C25.8398 84.6016 22.1074 81.1563 19.4277 74.7441C18.375 72.1602 17.2266 70.6289 15.0254 70.3418C13.877 70.2461 13.4941 69.7676 13.4941 69.1934C13.4941 68.0449 15.4082 67.1836 17.3223 67.1836C20.0977 67.1836 22.4902 68.9063 24.9785 72.4473C26.8926 75.2227 28.9023 76.4668 31.2949 76.4668C33.6875 76.4668 35.2187 75.6055 37.4199 73.4043C39.0469 71.7773 40.291 70.3418 41.4395 69.3848Z"/>
+                </svg>        
+            </a>
+        </div>
+        <div class="h-8 w-8 flex items-center justify-center">
+            <button id="theme" class="opacity-60 hover:opacity-100 transition-all duration-300 rounded border-none text-center text-[15px] px-4 py-2" onclick="toggle()">
+                <script>intializeToggle()</script>
+            </button>
+        </div>
+    </div>
 
-    <form action="./proj/map/map.html">
-        <input class="darkmode" style="top: 100px;" type="submit" value="Ocean Microplastic Map"/>
-    </form>
+    <!-- Main body -->
+    <div class="flex flex-col md:flex-row gap-8 max-w-[960px] mx-auto mt-5 px-4">
+        <div class="md:w-[70%] space-y-5">
+            <h1 class="font-bold">Jake Smith</h1>
+            <p>
+                I am a software developer with an interest in fullstack development and distributed systems.
+                I received my Bachelor of Science in Engineering in Computer Science from the <a class="text-blue-500 hover:text-blue-900 underline" href="https://umich.edu/">University of Michigan</a>.
+            </p>
+            <p>
+                My primary languages are C/C++, Python, JavaScript, and TypeScript. I have been working and learning with
+                Docker and Kubernetes to build out applications.
+            </p>
+        </div>
+        <div class="md:w-[30%]">
+            <img class="w-full h-auto mt-[20px] border-[5px] border-solid border-[rgb(49,49,49)]" src="./static/images/selfpicture.jpg" alt="Error Loading">
+        </div>
 
-    <table class="center">
-        <tr>
-            <td>
-                <h1>Jake E. Smith</h1> 
-                
-                <br>
+    </div>
 
-                <p>
-                    I'm currently a senior working on my Computer Science bachelors 
-                    at <a href="https://umich.edu/">University of Michigan</a>. I
-                    have experience with Python and C++ with a good understanding of
-                    Javascript. It's been a pleasure being able to work on tough projects
-                    thoughout my time at University of Michigan, and having to utilize
-                    skills learnt in class and out of to produce effiect results. I've
-                    used Flask, React, and SQL structures to produce prototype websites and
-                    have developed C++ programs optimized to work within limited runtimes.
-                </p>
-                <p>
-                    I've currently learnt <a href="https://deck.gl/">deck.gl</a> to produce 
-                    infographic maps that can be interacted with and create different 
-                    layers to display data in unique ways. For me, I'm interested in finding a
-                    summer internship to expand my experience and to gain skills and meet new people.
-                </p>
-            </td>
+    <!-- Scrollable card row -->
+    <div class="flex max-w-[960px] mx-auto px-4 py-6 font-bold">Projects</div>
+    <div id="carousel" class="flex gap-4 overflow-x-auto max-w-[960px] mx-auto px-4 py-6 mask-x-from-90% mask-x-to-100% cursor-grab select-none scrollbar-hide">
+        <a href="./proj/map/map.html" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+            <h3 class="font-bold">Ocean Microplastic Map</h3>
+            <p class="text-sm mt-2">
+                Interactive deck.gl visualization
+            </p>
+        </a>
 
-            <td>
-                <img class="portrait" src="./static/images/selfpicture.jpg" alt="Error Loading">
-            </td>            
-        </tr>
+        <a href="https://github.com/Jaksmiths/MTGDeckPricer" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+            <h3 class="font-bold">MTG Deck Pricer</h3>
+            <p class="text-sm mt-2">
+                Python App that uses Dash and Plotly to graph 
+                given MTG deck's price history
+            </p>
+        </a>
 
-        <script src="dark.js"></script>
+        <a href="https://github.com/Jaksmiths/NumericCore" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+            <h3 class="font-bold">Numeric Core & Mora Jai</h3>
+            <p class="text-sm mt-2">
+                Python scripts that calculate solutions to puzzles from Blue Prince
+            </p>
+        </a>
+
+        <a href="https://github.com/Jaksmiths/Cookbook" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+            <h3 class="font-bold">Cookbook</h3>
+            <p class="text-sm mt-2">
+                A cookbook site intended to be run locally 
+                through Docker on a Raspberry Pi
+            </p>
+        </a>
+    </div>
+    <script src="carousel.js"></script>
 </body>
 
 </html>
