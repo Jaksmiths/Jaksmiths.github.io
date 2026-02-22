@@ -20,6 +20,16 @@ carousel.addEventListener('scroll', () => {
     } else if (carousel.scrollLeft <= 0) {
         carousel.scrollLeft += setWidth;
     }
+    console.log(carousel.scrollLeft);
+});
+
+// Arrow button scrolling
+const scrollAmount = 270; // card width + gap
+document.getElementById('scroll-left').addEventListener('click', () => {
+    carousel.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+});
+document.getElementById('scroll-right').addEventListener('click', () => {
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
 });
 
 carousel.addEventListener('mousedown', (e) => {

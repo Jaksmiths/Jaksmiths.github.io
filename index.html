@@ -54,38 +54,54 @@
 
     <!-- Scrollable card row -->
     <div class="flex max-w-[960px] mx-auto px-4 py-6 font-bold">Projects</div>
-    <div id="carousel" class="flex gap-4 overflow-x-auto max-w-[960px] mx-auto px-4 py-6 mask-x-from-90% mask-x-to-100% cursor-grab select-none scrollbar-hide">
-        <a href="./proj/map/map.html" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
-            <h3 class="font-bold">Ocean Microplastic Map</h3>
-            <p class="text-sm mt-2">
-                Interactive deck.gl visualization
-            </p>
-        </a>
 
-        <a href="https://github.com/Jaksmiths/MTGDeckPricer" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
-            <h3 class="font-bold">MTG Deck Pricer</h3>
-            <p class="text-sm mt-2">
-                Python App that uses Dash and Plotly to graph 
-                given MTG deck's price history
-            </p>
-        </a>
+    <div class="relative w-full max-w-[960px] mx-auto flex items-center">
+        <button id="scroll-left" class="left-0 z-10 h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="text-gray-950 dark:text-gray-50 fill-current" height="24px" viewBox="0 -960 960 960" width="24px" fill="#e3e3e3">
+                <path d="M640-80 240-480l400-400 71 71-329 329 329 329-71 71Z"/>
+            </svg>
+        </button>
 
-        <a href="https://github.com/Jaksmiths/NumericCore" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
-            <h3 class="font-bold">Numeric Core & Mora Jai</h3>
-            <p class="text-sm mt-2">
-                Python scripts that calculate solutions to puzzles from Blue Prince
-            </p>
-        </a>
+        <div id="carousel" class="flex gap-4 overflow-x-auto max-w-[960px] mx-auto px-4 py-6 mask-x-from-90% mask-x-to-100% cursor-grab select-none scrollbar-hide">
+            <a href="./proj/map/map.html" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+                <h3 class="font-bold">Ocean Microplastic Map</h3>
+                <p class="text-sm mt-2">
+                    Interactive deck.gl visualization
+                </p>
+            </a>
 
-        <a href="https://github.com/Jaksmiths/Cookbook" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
-            <h3 class="font-bold">Cookbook</h3>
-            <p class="text-sm mt-2">
-                A cookbook site intended to be run locally 
-                through Docker on a Raspberry Pi
-            </p>
-        </a>
+            <a href="https://github.com/Jaksmiths/MTGDeckPricer" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+                <h3 class="font-bold">MTG Deck Pricer</h3>
+                <p class="text-sm mt-2">
+                    Python App that uses Dash and Plotly to graph 
+                    given MTG deck's price history
+                </p>
+            </a>
+
+            <a href="https://github.com/Jaksmiths/NumericCore" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+                <h3 class="font-bold">Numeric Core & Mora Jai</h3>
+                <p class="text-sm mt-2">
+                    Python scripts that calculate solutions to puzzles from Blue Prince
+                </p>
+            </a>
+
+            <a href="https://github.com/Jaksmiths/Cookbook" class="flex-none w-[250px] h-[150px] rounded-lg bg-gray-100 dark:bg-gray-800 p-4 hover:shadow-lg dark:hover:shadow-gray-600 transition-shadow">
+                <h3 class="font-bold">Cookbook</h3>
+                <p class="text-sm mt-2">
+                    A cookbook site intended to be run locally 
+                    through Docker on a Raspberry Pi
+                </p>
+            </a>
+        </div>
+
+        <button id="scroll-right" class="right-0 z-10 h-10 w-10 flex items-center justify-center rounded-full bg-gray-200 dark:bg-gray-700 opacity-60 hover:opacity-100 transition-opacity">
+            <svg class="text-gray-950 dark:text-gray-50 fill-current" height="24px" width="24px" viewBox="0 -960 960 960" fill="#e3e3e3">
+                <path d="m321-80-71-71 329-329-329-329 71-71 400 400L321-80Z"/>
+            </svg>        
+        </button>
+
+        <script src="carousel.js"></script>
     </div>
-    <script src="carousel.js"></script>
 </body>
 
 </html>
